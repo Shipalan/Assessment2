@@ -214,6 +214,10 @@ console.log(filteredFood)
 
 //CODE HERE
 
+ function filterByProperty(prop, num, type){
+     for (let i=0; i<prop.length; i++)
+    let str = foodArr.prop['']
+ }
 
 /*
     Invoke the `filterByProperty` function passing

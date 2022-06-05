@@ -35,7 +35,11 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((sum, object) => {       //assigning variable summedPrice. Calling the .reduce() method on each object in the cart array. sum parameter is the starting point.
+    return sum + object.price                            //taking sum and adding each price from each object to it.
+}, 0)                                                    // 0 is the starting value of 'sum'
+
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -55,7 +59,14 @@ const cart = [
 
 //CODE HERE
 
+function calcFinalPrice(ct, cv, tax){
+    let total = (tax + ct) - cv
+    return total
+}
 
+let input = calcFinalPrice(summedPrice, 5, .06)
+
+console.log(input)
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,6 +90,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    Name- 'string' Its going to be a string because that is how you would track names.
+    orderNumber- 'number' so they can keep track of the orders. It will be a number because it is a number value.
+    items- array['string'] It will be an array of strings so I can keep track of multiple items.
+    price- 'number' This will be a number value so we can keep track of the order cost.
 
 */
 
@@ -88,3 +103,10 @@ const cart = [
 */
 
 //CODE HERE
+
+const cart2 = {
+    name: 'Alan',
+    orderNumber: 1,
+    items: ['Hamburger', 'fries', 'drink'],
+    price: 12
+}
