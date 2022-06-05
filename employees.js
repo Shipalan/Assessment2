@@ -21,6 +21,18 @@
 
 //CODE HERE
 
+class Employee {
+    constructor(name, shifts){
+        this.name = name,
+        this.shifts = shifts
+    }
+
+
+    getsSchedule(){
+        console.log(`${this.name} will be working ${this.shifts}`)
+    }
+}
+
 
 
 /*
@@ -35,12 +47,19 @@
 
 //CODE HERE
 
+let empOne = new Employee('Alan Shipley', '8AM-4PM M-F')
+// console.log(empOne)
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
+
+empOne.getsSchedule()
+
+
 
 
 /*
@@ -57,7 +76,9 @@
 
 //CODE HERE
 
+let empTwo = {...empOne, ...{name: 'Nick'}}
 
+                                                             //empTwo.getsSchedule()   Need help understanding why this one does not log  like empOne.getsSchedule()////////////////////
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -83,6 +104,7 @@
 */
 
 //CODE HERE
+
 
 
 

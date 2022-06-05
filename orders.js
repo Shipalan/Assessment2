@@ -70,4 +70,3 @@ console.log(firstOrder)
 //CODE HERE
 
 firstOrder.updateStatus('Cooking')
-console.log(firstOrder)
