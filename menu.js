@@ -32,6 +32,15 @@
 
 //CODE HERE
 
+let pizza = {
+    name: 'Pepporoni',
+    price: 21,
+    catagory: 'entree',
+    popularity: 9,
+    rating: 93,
+    tags: ['pizza', 'pepperoni', 'kids']
+}
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +53,8 @@
 
 //CODE HERE
 
+// console.log(pizza.popularity)
+
 
 /*
     Second, log the second tag in your pizza's
@@ -53,6 +64,8 @@
 */
 
 //CODE HERE
+
+// console.log(pizza.tags[1])
 
 
 /*
@@ -65,6 +78,11 @@
 //CODE HERE
 
 
+
+let {price} = pizza
+// console.log(price)
+
+
 /*
     Fourth, and last, destructure the category
     property.
@@ -74,6 +92,8 @@
 
 //CODE HERE
 
+let {catagory} = pizza
+// console.log(catagory)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,6 +109,43 @@
 
 //CODE HERE
 
+let foodArr = [
+{   
+      type: 'Chicken',
+      rating: 1,
+      tags: ['chicken','free-range','no hormones'],
+      price: 10,
+      popularity: 80
+},
+{
+    type: 'pizza',
+    rating: 5,
+    tags: ['pepperoni','sauce','bread'],
+    price: 25,
+    popularity: 56
+},
+{
+    type: 'hamburger',
+    rating: 3,
+    tags: ['ketchup','patty','lettuce'],
+    price: 8,
+    popularity: 99
+},
+{
+    type: 'wings',
+    rating: 4,
+    tags: ['wing','bbq','ranch'],
+    price: 12,
+    popularity: 68
+},
+{
+    type: 'fries',
+    rating: 2,
+    tags: ['ketchup','potatos','ranch'],
+    price: 4,
+    popularity: 100
+}
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,8 +162,15 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
+const filteredFood = foodArr.filter(function(value){
+    for (let i=0; i<value.tags.length; i++)
+    if(value.tags[i] === 'ranch'){
+        return value.tags[i]
+    }       
+    }
+) 
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
