@@ -162,6 +162,12 @@ let foodArr = [
 
 //CODE HERE
 
+// function callback(element){
+//     return element.tags.includes('ranch')
+// } 
+
+// const filteredFood = foodArr.filter(callback())
+
 
 const filteredFood = foodArr.filter(function(value){
     for (let i=0; i<value.tags.length; i++)
@@ -213,11 +219,17 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+const filterByProperty = function(property, number, type) {
+    const filteredArr = foodArr.filter((element) => {
+        if (type === 'above'){
+            return element[property] > number
+        }else if (type === 'below'){
+            return element[property] < number
+        }
+    })
+    return filteredArr
+}
 
- function filterByProperty(prop, num, type){
-     for (let i=0; i<prop.length; i++)
-    let str = foodArr.prop['']
- }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -227,3 +239,4 @@ console.log(filteredFood)
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 5, 'above'))
